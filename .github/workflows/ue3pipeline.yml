@@ -3,7 +3,9 @@ name: UE3 Actions
 
 on: 
   push:
-    paths: 'Uebung03/**'
+    paths: |
+      'Uebung03/**'
+      '.github'
 
 permissions:
   contents: write

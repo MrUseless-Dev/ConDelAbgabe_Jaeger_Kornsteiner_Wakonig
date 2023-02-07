@@ -6,8 +6,7 @@ on:
     paths:
       - 'Uebung03/**'
       - '.github/workflows/ue3pipeline.yml'
-    tags:
-      - v*.*.*
+
 
 permissions:
   contents: write

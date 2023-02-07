@@ -13,7 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: docker compose
-        run: docker compose "./Uebung03/docker-compose.yml" up -d --build
+        working-directory: ./Uebung03
+        run: docker compose up -d --build
       # setup node environment
       - uses: actions/setup-node@v3
         with:

@@ -6,6 +6,21 @@ android {
     namespace 'com.example.myapplication'
     compileSdk 33
 
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\Lion\\Desktop\\FH-Joanneum\\Sem-5\\ConDel\\Abgabe\\ConDelAbgabe_Jaeger_Kornsteiner_Wakonig\\Uebung04\\MyApp\\android-keystore.jks')
+                    storePassword '000000'
+                    keyPassword '000000'
+                    keyAlias 'playstore'
+        }
+        release {
+            storeFile file('C:\\Users\\Lion\\Desktop\\FH-Joanneum\\Sem-5\\ConDel\\Abgabe\\ConDelAbgabe_Jaeger_Kornsteiner_Wakonig\\Uebung04\\MyApp\\android-keystore.jks')
+            storePassword '000000'
+            keyPassword '000000'
+            keyAlias 'playstore'
+        }
+    }
+
     defaultConfig {
         applicationId "com.example.myapplication"
         minSdk 24
@@ -29,6 +44,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+
 }
 
 dependencies {

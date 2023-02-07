@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - 'Uebung03/**'
-      - '.github/ue3pipeline.yml'
+      - '.github/workflows/ue3pipeline.yml'
 
 permissions:
   contents: write

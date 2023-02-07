@@ -6,18 +6,14 @@ on:
       - 'Uebung03/**'
       - '.github/workflows/ue3pipeline2.yml'
 
-permissions:
-  contents: write
 
 jobs:
   PartThreeNpmTest:
     runs-on: ubuntu-latest
     steps:
-      # Checkout Repository
       - uses: actions/checkout@v3
-      # Run Docker Compose up
       - name: docker compose
-        run: docker compose up -d
+        run: docker compose "./Uebung03/docker-compose.yml" up -d --build
       # setup node environment
       - uses: actions/setup-node@v3
         with:

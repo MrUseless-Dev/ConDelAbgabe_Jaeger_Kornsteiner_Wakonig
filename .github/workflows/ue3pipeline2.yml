@@ -21,9 +21,9 @@ jobs:
           node-version: 18
       # install current dependencies in sub-directory
       - name: install dependencies
-        working-directory: ./app
+        working-directory: ./Uebung03/app
         run: npm install
       # run current tests in sub-directory
       - name: run tests
-        working-directory: ./app
+        working-directory: ./Uebung03/app
         run: npm test

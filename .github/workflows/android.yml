@@ -21,9 +21,11 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: |
+        cd ./Uebung04/MyApp
+        chmod +x gradlew
     - name: Build with Gradle
-      run: ./Uebung04/MyApp/gradlew build
+      run: ./gradlew build
       
     - name: Publish APK
       uses: actions/upload-artifact@v3

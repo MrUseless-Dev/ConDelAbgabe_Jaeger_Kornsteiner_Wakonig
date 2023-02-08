@@ -8,7 +8,7 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file('.\\Penis\\android-keystore.jks')
+            storeFile file('.\\android-keystore.jks')
                     storePassword '000000'
                     keyPassword '000000'
                     keyAlias 'playstore'

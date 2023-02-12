@@ -48,6 +48,4 @@ jobs:
     - name: Final Check with Jar Signer
       run: |
         cd Uebung04/MyApp
-        pwd
-        tree .
         jarsigner -verify -verbose -certs ./app/build/outputs/apk/release-signed/app-release-signed.apk

@@ -47,4 +47,5 @@ jobs:
 
     - name: Final Check with Jar Signer
       run: |
-        jarsigner -verify -verbose -certs /Uebung04/MyApp/app/build/outputs/apk/release/app-release-signed.apk
+        cd Uebung04/MyApp
+        jarsigner -verify -verbose -certs ./app/build/outputs/apk/release/app-release-signed.apk

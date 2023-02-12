@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: app-release.apk
-        path: ./Uebung04/MyApp/app/build/outputs/apk/release/app-release.apk
+        path: ./Uebung04/MyApp/app/release/app-release.apk
 
     - name: Prepare Keystore and properties
       run: |
@@ -49,4 +49,4 @@ jobs:
 
     - name: Final Check with Jar Signer
       run: |
-        jarsigner -verify -verbose -certs ./Uebung04/MyApp/app/build/outputs/apk/release/app-release.apk
+        jarsigner -verify -verbose -certs ./Uebung04/MyApp/app/release/app-release.apk

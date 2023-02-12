@@ -1,0 +1,29 @@
+name: UE3 Actions2
+
+on: 
+  push:
+    paths:
+      - 'Uebung03/**'
+      - '.github/workflows/ue3pipeline2.yml'
+
+
+jobs:
+  PartThreeNpmTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: docker compose
+        working-directory: ./Uebung03
+        run: docker compose up -d --build
+      # setup node environment
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      # install current dependencies in sub-directory
+      - name: install dependencies
+        working-directory: ./Uebung03/app
+        run: npm install
+      # run current tests in sub-directory
+      - name: run tests
+        working-directory: ./Uebung03/app
+        run: npm test

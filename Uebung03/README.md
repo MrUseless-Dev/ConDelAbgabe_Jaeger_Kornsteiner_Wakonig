@@ -80,6 +80,18 @@ check it out with your browser, [cURL](https://curl.se/) or [Postman](https://ww
 
 use [Postman Collection](https://www.postman.com/collections/68249abda8f8d5ec3f15) for quick start and to do first API calls
 
+##Wie können mehrere Container miteinander genutzt werden?
+Mittels Docker Compose
+
+##Welche Vorteile bietet diese modulare Auftrennung?
+Man kann einzelne Softwarekomponenten gezielt und effizient austauschen und updaten. 
+
+##Wie ist ein docker-compose.yml aufgebaut?
+Docker compose file ist eine Sammlung von images, die in einzelnen Containern laufen. 
+Beinhaltet verschiede images, die je nach Requirement variieren.
+      
+##Welche Punkte müssen bei Docker Compose und CI/CD Pipelines beachtet werden?
+TODO GREGO
 
 ## References
 * [Node.js - Das umfassende Handbuch](https://www.rheinwerk-verlag.de/nodejs-das-umfassende-handbuch/)

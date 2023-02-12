@@ -40,12 +40,12 @@ jobs:
 
     - name: Prepare Keystore and properties
       run: |
-        echo tree
+        tree
         cd Uebung04/MyApp
         echo "${{secrets.ANDROID_KEYSTORE}}" > keystore.asc
         gpg -d --passphrase "${{secrets.ANDROID_KEYSTORE_PASSPHRASE}}" -batch keystore.asc > app/android-keystore.jks
         echo "____________"
-        echo tree
+        tree
 
     - name: Final Check with Jar Signer
       run: |

@@ -1,0 +1,28 @@
+
+name: UE3 Actions
+
+on: 
+  push:
+    paths:
+      - 'Uebung03/**'
+      - '.github/workflows/ue3pipeline.yml'
+
+
+permissions:
+  contents: write
+
+jobs:
+  OutputSomeStuff:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running the UE3 Workflow."
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+  ComposeUpStuff:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: isbang/compose-action@v1.4.1
+      with:
+        compose-file: "./Uebung03/docker-compose.yml"

@@ -50,4 +50,4 @@ jobs:
         cd Uebung04/MyApp
         pwd
         tree .
-        jarsigner -verify -verbose -certs ./app/build/outputs/apk/release/app-release-signed.apk
+        jarsigner -verify -verbose -certs ./app/build/outputs/apk/release-signed/app-release-signed.apk

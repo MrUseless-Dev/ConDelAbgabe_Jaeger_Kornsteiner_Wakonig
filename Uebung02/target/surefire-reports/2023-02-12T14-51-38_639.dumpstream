@@ -1,0 +1,4 @@
+# Created at 2023-02-12T14:51:40.820
+Boot Manifest-JAR contains absolute paths in classpath 'D:\FH-Joanneum\Semester5\ConDel\ConDelAbgabe_Jaeger_Kornsteiner_Wakonig\Uebung02\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

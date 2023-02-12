@@ -1,7 +1,10 @@
-name: Android CI
+name: Dockerfile CI
 
 on:
   push:
+    paths:
+      - 'Uebung02/**'
+      - '.github/workflows/dockerfile.yml'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
@@ -24,7 +27,8 @@ jobs:
     - name: Build and push to public repository
       uses: docker/build-push-action@v3
       with:
+        run: cd 
         context: .
-        file: ./Uebung02/Dockerfile
+        file: "./Uebung02/Dockerfile"
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/democalc_public:latest

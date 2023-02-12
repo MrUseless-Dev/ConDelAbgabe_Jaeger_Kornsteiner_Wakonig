@@ -9,14 +9,14 @@ android {
     signingConfigs {
         debug {
             storeFile file('.\\android-keystore.jks')
-                    storePassword '000000'
-                    keyPassword '000000'
-                    keyAlias 'key0'
+            storePassword findProperty('storePassword')
+            keyPassword findProperty('keyPassword')
+            keyAlias 'key0'
         }
         release {
             storeFile file('.\\android-keystore.jks')
-            storePassword '000000'
-            keyPassword '000000'
+            storePassword findProperty('storePassword')
+            keyPassword findProperty('keyPassword')
             keyAlias 'key0'
         }
     }

@@ -91,7 +91,7 @@ Docker compose file ist eine Sammlung von images, die in einzelnen Containern la
 Beinhaltet verschiede images, die je nach Requirement variieren.
       
 ##Welche Punkte müssen bei Docker Compose und CI/CD Pipelines beachtet werden?
-TODO GREGO
+Die Docker container haben immer die gleichen ports, also müssen die ports geforwarded werden. Falls am system bereits andere Applikationen installiert sind, die die ports bereits besetzen, die die container standardmäßig verwenden, so müssen andere verwendet werden.
 
 ## References
 * [Node.js - Das umfassende Handbuch](https://www.rheinwerk-verlag.de/nodejs-das-umfassende-handbuch/)

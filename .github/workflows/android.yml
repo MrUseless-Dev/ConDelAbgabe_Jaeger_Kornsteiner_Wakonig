@@ -40,12 +40,12 @@ jobs:
 
     - name: Prepare Keystore and properties
       run: |
+        echo tree
         cd Uebung04/MyApp
         echo "${{secrets.ANDROID_KEYSTORE}}" > keystore.asc
-        mkdir app/keystore
         gpg -d --passphrase "${{secrets.ANDROID_KEYSTORE_PASSPHRASE}}" -batch keystore.asc > app/android-keystore.jks
-        echo "storePassword=${{secrets.ANDROID_KEYSTORE_PASSPHRASE}}" >> gradle.properties
-        echo "keyPassword=${{secrets.ANDROID_KEYSTORE_PASSPHRASE}}" >> gradle.properties
+        echo "____________"
+        echo tree
 
     - name: Final Check with Jar Signer
       run: |

@@ -27,8 +27,8 @@ jobs:
     - name: Build and push to public repository
       uses: docker/build-push-action@v3
       with:
-        run: cd 
+        run: cd ./Uebung02
         context: .
-        file: "./Uebung02/Dockerfile"
+        file: "./Dockerfile"
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/democalc_public:latest
